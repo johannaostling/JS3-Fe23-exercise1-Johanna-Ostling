@@ -6,16 +6,19 @@ window.onload= fetchPage("home.html")
 home.addEventListener('click', event => {
     event.preventDefault()
     fetchPage("home.html");
+    history.pushState({ page: 0 }, "home", "/home");
 })
 
 about.addEventListener('click', event => {
     event.preventDefault()
     fetchPage("about.html");
+    history.pushState({ page: 1 }, "about", "/about");
 })
 
 contact.addEventListener('click', event=>{
     event.preventDefault();
     fetchPage("contact.html")
+    history.pushState({ page: 2 }, "contact", "/contact");
 })
 
 let content=document.getElementById("container")
@@ -28,3 +31,4 @@ function fetchPage(filename){
     .then(data=> content.innerHTML = data)
     
 }
+
