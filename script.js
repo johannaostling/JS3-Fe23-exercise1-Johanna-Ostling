@@ -2,6 +2,7 @@ let home= document.getElementsByTagName("a")[0]
 let about= document.getElementsByTagName("a")[1]
 let contact= document.getElementsByTagName("a")[2]
 
+window.onload= fetchPage("home.html")
 home.addEventListener('click', event => {
     event.preventDefault()
     fetchPage("home.html");
@@ -14,7 +15,7 @@ about.addEventListener('click', event => {
 
 contact.addEventListener('click', event=>{
     event.preventDefault();
-    fetchPage(contact.html)
+    fetchPage("contact.html")
 })
 
 let content=document.getElementById("container")
