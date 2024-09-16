@@ -1,31 +1,29 @@
-const home= document.getElementsByTagName('a')[0]
-const about= document.getElementsByTagName('a')[1]
-const contact= document.getElementsByTagName('a')[2]
+let home= document.getElementsByTagName("a")[0]
+let about= document.getElementsByTagName("a")[1]
+let contact= document.getElementsByTagName("a")[2]
 
-window.onload = fetchHtml('home')
-
-window.addEventListener('popstate', (event) => {
-    /*     alert(
-      `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
-    ); */
-    switch (event.state.page) {
-        case 0:
-            fetchHtml('home')
-            break
-        case 1:
-            fetchHtml('contact')
-            break
-        default:
-            fetchHtml('home')
-    }
+home.addEventListener('click', event => {
+    event.preventDefault()
+    fetchPage("home.html");
 })
 
-home.addEventListener('click', (e)=>{
-    history.pushState({page:0}, 'home','home')
-    fetchPage('home')
+about.addEventListener('click', event => {
+    event.preventDefault()
+    fetchPage("about.html");
 })
 
-home.addEventListener('click', (e)=>{
-    history.pushState({page:1}, 'about','about')
-    fetchPage('about')
+contact.addEventListener('click', event=>{
+    event.preventDefault();
+    fetchPage(contact.html)
 })
+
+let content=document.getElementById("container")
+
+function fetchPage(filename){
+    if(typeof filename!= "string")
+        return;
+    fetch(filename)
+    .then(response=>{return response.text()})
+    .then(data=> content.innerHTML = data)
+    
+}
