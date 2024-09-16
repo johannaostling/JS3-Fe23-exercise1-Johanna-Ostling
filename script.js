@@ -6,19 +6,19 @@ window.onload= fetchPage("home.html")
 home.addEventListener('click', event => {
     event.preventDefault()
     fetchPage("home.html");
-    history.pushState({ page: 0 }, "home", "/home");
+    history.pushState({ page: 0 }, "home", "/home.html");
 })
 
 about.addEventListener('click', event => {
     event.preventDefault()
     fetchPage("about.html");
-    history.pushState({ page: 1 }, "about", "/about");
+    history.pushState({ page: 1 }, "about", "/about.html");
 })
 
 contact.addEventListener('click', event=>{
     event.preventDefault();
     fetchPage("contact.html")
-    history.pushState({ page: 2 }, "contact", "/contact");
+    history.pushState({ page: 2 }, "contact", "/contact.html");
 })
 
 let content=document.getElementById("container")
@@ -29,6 +29,5 @@ function fetchPage(filename){
     fetch(filename)
     .then(response=>{return response.text()})
     .then(data=> content.innerHTML = data)
-    
 }
 
