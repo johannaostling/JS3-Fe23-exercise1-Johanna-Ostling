@@ -4,3 +4,9 @@
     margin-top: 4rem;
   
 }
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(139, 233, 122);
+    color: white;
+  }
