@@ -31,3 +31,22 @@ function fetchPage(filename){
     .then(data=> content.innerHTML = data)
 }
 
+//Meny script
+const menuBtn = document.querySelector("#menu-btn");
+menuBtn.addEventListener("click", (event) => {
+
+    event.preventDefault();
+
+    const sidebar = document.querySelector(".sidebar");
+    sidebar.classList.add("show");
+
+});
+
+const closeBtn = document.querySelector("#close-btn");
+closeBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const sidebar = document.querySelector(".sidebar");
+    sidebar.classList.remove("show");
+});
+
