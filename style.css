@@ -1,8 +1,9 @@
+
 #container{
   
     margin: 1rem;
     margin-top: 4rem;
-    width: 100%;
+    width: 80%;
   
 }
 /* header{
@@ -26,14 +27,14 @@ footer {
 nav{
     background-color: rgba(116, 211, 143, 0.805);
     box-shadow: 3px 3px 5px rgb(0,0,0,0.1);
+    
 }
 
 nav ul{
-    width: 100%;
     list-style: none;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    
 }
 nav li{
     height: 50px;
@@ -51,16 +52,16 @@ nav a{
     opacity: 0.8;
 }
 
-nav li:first-child{
+/* nav li:first-child{
     margin-right: auto;
-}
+} */
 
 .sidebar{
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
-    width: 370px;
+    width: 150px;
     z-index: 999;
     background-color: rgba(255, 255, 255, 0.318);
     backdrop-filter: blur(10px);
