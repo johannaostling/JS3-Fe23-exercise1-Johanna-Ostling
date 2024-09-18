@@ -75,7 +75,9 @@ nav a{
     transition: opacity 1s ease, transform 1s ease;
 
 }
-
+#bars{
+    /*  */
+}
 .sidebar.show{
     display: flex;
     opacity: 1;
